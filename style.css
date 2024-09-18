@@ -1,0 +1,724 @@
+/*tratamento de color do site com variaveis para utilização do dark-mode*/
+
+:root {
+    --body-bg: #edf1f4;
+    --color-font: #1e1f26;
+    --color-top-buttom: #1e1f26;
+    --color-butom-hover: #888888;
+    --font-ft: 'Roboto', sans-serif;
+
+}
+
+[data-theme="dark"] {
+    --body-bg: #1e1f26;
+    --color-font: #edf1f4;
+    --color-top-buttom: #edf1f4;
+    --color-butom-hover: #888888;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--color-font);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--font-ft);
+    background: var(--body-bg);
+    height: 8vh;
+    box-shadow: 0 0 1em var(--color-butom-hover);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: var(--color-font);
+    margin: 8px;
+}
+
+.button {
+    background-color: var(--color-top-buttom);
+    padding: 0px;
+    top: 1px;
+    border: solid 1var(--color-font);
+    border-radius: 20%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--color-butom-hover);
+    transition: 400ms;
+    border: none;
+
+}
+
+.button:hover svg {
+    color: var(--body-bg);
+}
+
+/*tratamento para imagem do btn da dark-mode e white-mode*/
+svg {
+    color: var(--body-bg);
+    width: 20px;
+    height: 20px;
+
+}
+
+/*Incio-- onde tudo começa*/
+
+.Main_inicio {
+    margin-top: 50px;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    border: none;
+    padding: 10px;
+    display: flex;
+    /*sempre deixar flex para que o texto não sobrepoen a navbar*/
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+    scroll-margin-top: 20rem;
+    background: var(--body-bg);
+    border-radius: 30px;
+    box-shadow: 0 0 1em var(--body-bg);
+
+}
+
+/* uma frase sobre mim*/
+
+.main_left h1 {
+    align-items: flex-start;
+    margin-left: 20px;
+    border-radius: 5px;
+    font-size: 55px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-font);
+
+}
+
+/* uma leve descrição sobre mim*/
+
+.main_left p {
+    position: relative;
+    font-size: 35px;
+    justify-content: center;
+    margin-top: 10px;
+    flex: 1;
+    font-family: 'Inclusive Sans', sans-serif;
+    color: var(--color-font);
+}
+
+/* minha foto */
+.main_rigth img {
+    /* position: relative; */
+    width: 700px;
+    margin: 0;
+    margin-bottom: 4rem;
+
+}
+
+
+/* botão para entrar em contato*/
+
+.btn_contato button {
+    margin: 20px;
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--color-top-buttom);
+    color: var(--body-bg);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+
+}
+
+.btn_contato button:hover {
+    background-color: var(--color-butom-hover);
+    box-shadow: 0px 0px 10px var(--color-top-buttom);
+    transform: scale(1.05);
+    color: var(--color-font);
+
+}
+
+
+
+/*parte onde fala sobre mim Sobre mim*/
+
+.main_sobre {
+    padding: 2rem;
+
+
+}
+
+.sbrm {
+    display: inline-block;
+    padding: 10px;
+    margin: 32px;
+    font-size: 25px;
+    border: 0.1px transparent var(--color-font);
+    border-radius: 10px;
+    background-color: var(--color-top-buttom);
+    color: var(--body-bg);
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.sbrmim {
+    margin: 20px;
+    padding: 2rem;
+    font-size: 25px;
+    font-family: var(--font-ft);
+    text-align: start;
+    color: var(--color-font);
+    background: var(--body-bg);
+    border-radius: 25px;
+    box-shadow: 0 0 1em var(--body-bg);
+}
+
+
+/* parte onde descreve as habilidades*/
+
+.main_habilidades {
+    padding: 2rem;
+}
+
+.top_habilidades {
+    display: inline-block;
+    padding: 10px;
+    margin: 32px;
+    font-size: 25px;
+    border: 0.1px transparent var(--color-font);
+    border-radius: 10px;
+    background-color: var(--color-top-buttom);
+    color: var(--body-bg);
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.habilidades {
+    padding: 4rem;
+    font-size: 25px;
+    font-family: sans-serif;
+    text-align: justify;
+    color: var(--color-font);
+    background: var(--body-bg);
+    border-radius: 25px;
+    box-shadow: 0 0 1em var(--body-bg);
+}
+
+
+
+/* parte dos projetos com animação em desenvolvimento*/
+
+.main_projetos {
+    padding: 2em;
+    height: 300px;
+
+
+}
+
+.top_projetos {
+    display: inline-block;
+    padding: 10px;
+    margin: 32px;
+    font-size: 25px;
+    border: 0.1px transparent var(--color-font);
+    border-radius: 10px;
+    background-color: var(--color-top-buttom);
+    color: var(--body-bg);
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.projetos1 ul {
+    column-count: 2;
+    column-gap: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 1px;
+    width: 50rem;
+    height: 50rem;
+    left: 20rem;
+    padding: 45px;
+
+}
+
+.projetos1 {
+    background-color: var(--body-bg);
+    width: 100%;
+    height: 200%;
+    border-radius: 30px;
+    box-shadow: 0 0 1em var(--body-bg);
+
+
+}
+
+img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: scale 350ms ease, opacity 350ms linear;
+    border-radius: 15px;
+    cursor: pointer;
+    z-index: 1;
+
+}
+
+.projetos1:has(img:hover) img:not(:hover) {
+    scale: .9;
+    opacity: .7;
+
+}
+
+li {
+    list-style-type: none
+}
+
+
+spann {
+    display: flex;
+    position: absolute;
+    top: 120px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    letter-spacing: 12px;
+    color: var(--color-font);
+}
+
+/*CONTATOS*/
+
+.main_contato {
+    padding: 2rem;
+}
+
+.top_contato {
+    display: inline-block;
+    padding: 10px;
+    margin: 32px;
+    font-size: 25px;
+    border: 0.1px transparent var(--color-font);
+    border-radius: 10px;
+    background-color: var(--color-top-buttom);
+    color: var(--body-bg);
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+.body_contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vh;
+
+}
+
+section {
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vh;
+    background-color: var(--color-top-buttom);
+    color: var(--color-font);
+    padding: 10px 45px;
+    width: 500px;
+    background: var(--body-bg);
+    border-radius: 25px;
+    box-shadow: 0 0 1em var(--body-bg);
+}
+
+section h {
+    color: var(--color-font);
+    font-size: 2.5rem;
+    margin: 2rem;
+}
+
+section form {
+    border-radius: 15;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+form label {
+    color: var(--color-font);
+    font-size: 20px;
+    margin-bottom: 4px;
+    font-family: 'Roboto', sans-serif;
+}
+
+form input {
+    padding: 15px;
+    outline: none;
+    border: solid 1;
+    margin-bottom: 20px;
+    font-size: 15px;
+    transition: all 0.5s;
+    border-radius: 5px;
+}
+
+form input:focus {
+    border-radius: 16px;
+    box-shadow: 0px 0px 10px var(--body-bg);
+}
+
+
+form textarea {
+    padding: 10px;
+    outline: none;
+    border: solid 5;
+    font-size: 15px;
+    margin-bottom: 15px;
+    transition: all 0.5s;
+    border-radius: 5px;
+}
+
+form textarea:focus {
+    border-radius: 16px;
+    box-shadow: 0px 0px 10px var(--body-bg);
+}
+
+form button {
+    padding: 15px;
+    cursor: pointer;
+    background-color: var(--color-font);
+    color: var(--body-bg);
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: all 1;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: solid var(--body-bg);
+}
+
+form button:hover {
+    box-shadow: 0px 0px 20px var(--body-bg);
+    background-color: var(--body-bg);
+    color: var(--color-font);
+    border: 1px transparent var(--color-font);
+
+}
+
+
+.success,
+.error {
+    text-align: center;
+}
+
+.success {
+    color: var(--color-font);
+}
+
+.error {
+    color: var(--color-font);
+}
+
+
+/*tratamendo de responsividade*/
+
+
+
+@media (max-width: 878px) {
+
+    body {
+        overflow-x: hidden;
+
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 100vw;
+        height: 92vh;
+        background: var(--body-bg);
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 0 1em var(--color-butom-hover);
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transdorm 0.3s ease-in;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        flex: 1;
+    }
+
+    .mobile-menu {
+        display: block;
+
+    }
+
+    .nav-list.active {
+        transform: translatex(0);
+
+    }
+
+    .button {
+        width: 20px;
+        height: 20px;
+    }
+
+    .button svg {
+        width: 10px;
+        height: 10px;
+
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+
+
+@media (max-width: 878px) {
+
+    /* Incio-- onde tudo começa*/
+    body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .Main_inicio {
+        margin-top: 50px;
+        margin-left: 15px;
+        margin-right: 15px;
+        justify-content: center;
+        border: none;
+        display: block;
+        scroll-margin-top: 20rem;
+        flex: 2;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+
+    /* uma frase sobre mim*/
+    .main_left h1 {
+        font-size: 33px;
+        justify-content: center;
+    }
+
+    /* uma leve descrição sobre mim*/
+    .main_left p {
+        font-size: 15px;
+        justify-content: center;
+        margin-top: 30px;
+        padding: 15px;
+        flex: 1;
+        word-break: break-all;
+    }
+
+    */
+
+    /* minha foto */
+    .main_rigth {
+        justify-content: center;
+        display: flex;
+    }
+
+
+    .main_rigth img {
+
+        width: 250px;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    /* botão para entrar em contato*/
+    .btn_contato {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+
+    }
+
+    .btn_contato a {
+        padding: 0;
+    }
+
+    #btn_contato button {
+        /* margin: 20px;
+    padding: 0; */
+        font-size: 3px;
+        justify-content: center;
+        align-items: center;
+        width: 100vh;
+    }
+
+
+    .main_sobre {
+        padding: 1rem;
+    }
+
+    .sbrm {
+        display: inline-block;
+        padding: 5px;
+        margin: 32px;
+        font-size: 20px;
+
+    }
+
+    .sbrmim {
+        padding: 1rem;
+        font-size: 15px;
+        font-family: sans-serif;
+        text-align: justify;
+
+    }
+
+    .main_habilidades {
+        padding: 1rem;
+    }
+
+    .top_habilidades {
+        display: inline-block;
+        padding: 5px;
+        margin: 32px;
+        font-size: 20px;
+
+    }
+
+    .habilidades {
+        padding: 1rem;
+        font-size: 15px;
+        font-family: sans-serif;
+        text-align: justify;
+
+    }
+
+    .main_projetos {
+        padding: 1em;
+    }
+
+    .top_projetos {
+        display: inline-block;
+        padding: 5px;
+        margin: 32px;
+        font-size: 20px;
+    }
+
+    .main_contato {
+        padding: 1rem;
+    }
+
+    .top_contato {
+        display: inline-block;
+        padding: 5px;
+        margin: 32px;
+        font-size: 20px;
+    }
+
+    .body_contato {
+        min-width: auto;
+    }
+
+    section {
+        width: 150px;
+        min-width: 360px;
+        padding: 5px 25px;
+    }
+
+    section h {
+        font-size: 2rem;
+    }
+
+    form label {
+        font-size: 15px;
+    }
+
+    form input {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:1300px) {
+
+    img {
+        width: 100%;
+    }
+
+    .projetos1 ul {
+        padding: 7px;
+        display: flex;
+        margin: 1px;
+        width: 100%;
+        height: 200%;
+
+
+    }
+}
